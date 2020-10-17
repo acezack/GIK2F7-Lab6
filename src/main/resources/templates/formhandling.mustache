@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .container {
+        border: solid white 2px;
+        padding: 5%;
+        color: white;
+        margin: 5%;
+        margin-top: 10%;
+    }
+
+    body {
+        background-image: url("https://s1.1zoom.me/b5050/745/contractBusiness_503728_1920x1200.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .users {
+        color: white;
+    }
+</style>
+<body>
+
+<div class="container">
+    <h2 >Hello {{firstname}}!</h2>
+    <h1>Welcome to your form.</h1>
+    <br>
+    {{#entryset}} {{.}}, {{/entryset}}
+    <br>
+    {{#keyset}} {{.}}, {{/keyset}}
+    <br>
+    {{#values}} {{.}}, {{/values}}
+    <br>
+    <br>
+    <a href="/userform" class="btn btn-primary">Back</a>
+    <br>
+    <br>
+    <a href="http://localhost:8080/userapp/users" class="btn btn-primary">Home</a>
+</div>
+</body>
+</html>

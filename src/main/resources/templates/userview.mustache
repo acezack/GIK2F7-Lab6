@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .card {
+        border: solid black 2px;
+    }
+
+    body {
+        background-image: url("https://s1.1zoom.me/b5050/745/contractBusiness_503728_1920x1200.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .users {
+        color: white;
+    }
+</style>
+<body>
+
+<div class="container">
+    <h2 class="users">User</h2>
+
+    <div class="row">
+        {{#user}}
+            <div class="col-sm">
+                <div class="card" style="width:400px">
+                    <img src="https://www.w3schools.com/bootstrap4/img_avatar3.png" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">{{name}}</h4>
+                        <p class="card-text">ID: {{id}}</p>
+                        <p class="card-text">Ålder: {{age}}</p>
+                        <p class="card-text">Adress: {{address}}</p>
+                        <a href="/userapp/users" class="btn btn-primary">More info</a>
+                    </div>
+                </div>
+            </div>
+        {{/user}}
+    </div>
+    <br>
+    <a href="http://localhost:8080/userform" class="btn btn-primary">Create new user</a>
+</div>
+</body>
+</html>

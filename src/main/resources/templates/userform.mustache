@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .card {
+        border: solid black 2px;
+    }
+
+    body {
+        background-image: url("https://s1.1zoom.me/b5050/745/contractBusiness_503728_1920x1200.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        color: white;
+    }
+</style>
+<body>
+
+<div class="container">
+    <h2 class="users">Form handling</h2>
+    <form mehtod="POST" action="/formhandling">
+        <label>First name</label>
+        <input type="text" name="first_name">
+        <br>
+        <label>Last name</label>
+        <input type="text" name="last_name">
+        <br>
+        <label>Date of birth</label>
+        <input type="text" name="date_of_birth">
+        <br>
+
+        <label><h5>Gender</h5>
+            <label for="Male">Male</label>
+            <input id="Male" type="radio" name="Gender" value="Male">
+            <label for="Female">Female</label>
+            <input id="Female" type="radio" name="Gender" value="Female">
+        </label>
+        <br>
+
+        <label><h5>Hobbies</h5>
+            <label >Sports</label>
+            <input type="checkbox" name="Sports" value="Sports">
+            <label >Video games</label>
+            <input type="checkbox" name="Video games" value="Video games">
+            <label >Hiking</label>
+            <input type="checkbox" name="Hiking" value="Hiking">
+            <label >Other</label>
+            <input type="checkbox" name="Other" value="Other">
+        </label>
+        <br>
+
+        <label><h5>Email</h5></label>
+        <input type="text" name="email">
+        <label>Phone number</label>
+        <input type="text" name="phonenumber">
+        <br>
+
+        <h5>Text</h5>
+        <textarea id="textarea" name="text" rows="4" cols="50">Text here</textarea>
+        <br>
+        <button class="btn btn-primary" type="Submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>
