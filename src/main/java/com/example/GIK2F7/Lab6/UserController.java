@@ -11,17 +11,17 @@ public class UserController {
     private User user2 = new User("b", "Bandoola", "Bananvägen 2", 77);
     private User user3 = new User("c", "Band", "Bananvägen 6", 23);
 
-    private User[] userList = {user1, user2, user3};
+    private User[] users = {user1, user2, user3};
 
     @RequestMapping("userapp/users")
-    public String page(Model model) {
-        model.addAttribute("user",userList);
-        return "urlview";
+    public String usersview(Model model) {
+        model.addAttribute("user",users);
+        return "usersview";
     }
 
     @RequestMapping("userapp/users/{id}")
     public String userview (Model model, @PathVariable(required = false) String id) {
-        for (User user : userList) {
+        for (User user : users) {
             if (id.equals(user.getId())) {
                 model.addAttribute("user",user);
             }

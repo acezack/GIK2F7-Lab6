@@ -10,18 +10,18 @@ import java.util.Map;
 
 @Controller
 public class FormController {
-    @RequestMapping("/userform")
-    public String userform(Model model) {
-        return "userform";
+    @RequestMapping("formapp/createform")
+    public String createformview(Model model) {
+        return "createformview";
     }
 
-    @PostMapping("/formhandling")
-    public String formhandling(Model model, @RequestParam Map<String, String> allFormRequestParams) {
+    @PostMapping("formapp/form")
+    public String formview(Model model, @RequestParam Map<String, String> allFormRequestParams) {
         model.addAttribute("firstname", allFormRequestParams.get("first_name"));
         model.addAttribute("entryset", allFormRequestParams.entrySet());
         model.addAttribute("keyset", allFormRequestParams.keySet());
         model.addAttribute("values", allFormRequestParams.values());
 
-        return "/formhandling";
+        return "formview";
     }
 }
