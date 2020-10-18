@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bootstrap Example</title>
+    <title>Create form</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -15,9 +15,7 @@
     }
 
     body {
-        background-image: url("https://s1.1zoom.me/b5050/745/contractBusiness_503728_1920x1200.jpg");
-        background-repeat: no-repeat;
-        background-size: 100%;
+        background-color: black;
         color: white;
     }
 </style>
@@ -25,7 +23,7 @@
 
 <div class="container">
     <h2 class="users">Form handling</h2>
-    <form mehtod="POST" action="/formhandling">
+    <form method="POST" action="/formhandling">
         <label>First name</label>
         <input type="text" name="first_name">
         <br>
@@ -41,6 +39,8 @@
             <input id="Male" type="radio" name="Gender" value="Male">
             <label for="Female">Female</label>
             <input id="Female" type="radio" name="Gender" value="Female">
+            <label for="Other">Other</label>
+            <input id="Other" type="radio" name="Gender" value="Other">
         </label>
         <br>
 
@@ -65,7 +65,11 @@
         <h5>Text</h5>
         <textarea id="textarea" name="text" rows="4" cols="50">Text here</textarea>
         <br>
+        <br>
         <button class="btn btn-primary" type="Submit">Submit</button>
+        <br>
+        <br>
+        <a href="./userapp/users" class="btn btn-primary">Home</a>
     </form>
 </div>
 </body>
